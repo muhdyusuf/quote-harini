@@ -1,10 +1,10 @@
-import { useAuth } from '@/Context/authContext'
+// import { useAuth } from '@/Context/authContext'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
-import { Skeleton } from '@/components/ui/skeleton'
+// import { Skeleton } from '@/components/ui/skeleton'
 import { db } from '@/lib/firebaseConfig'
-import { QuerySnapshot, Timestamp, collection, getDocs, query, where } from 'firebase/firestore'
+import { Timestamp, collection, getDocs, query, where } from 'firebase/firestore'
 import { Quote } from 'lucide-react'
-import { FC, useEffect, useState,Suspense} from 'react'
+import { FC, useEffect, useState} from 'react'
 
 interface QuoteHariniProps {
   
@@ -46,9 +46,9 @@ const QuoteHarini: FC<QuoteHariniProps> = ({}) => {
         })
     },[])
 
-    const {currentUser}=useAuth()
+    // const {currentUser}=useAuth()
     const [quote,setQuote]=useState<IQuote|null>(null)
-    const [isLoading,setIsLoading]=useState<boolean>(false)
+    // const [isLoading,setIsLoading]=useState<boolean>(false)
     
     
   return (
@@ -68,9 +68,9 @@ const QuoteHarini: FC<QuoteHariniProps> = ({}) => {
                 <div
                     className='flex gap-2'
                 >
-                    <Quote className='rotate-180 text-8xl text-slate-400/80 '/>
+                    <Quote className='rotate-180 text-8xl text-slate-400/80 min-w-min'/>
                     <blockquote
-                        className='text-4xl text-blue-500 font-black text-left p-0 m-0 '
+                        className='text-5xl text-blue-500 font-black text-left p-0 m-0 leading-1'
                         >
                         {quote?.quote.split('\n').map((line,index)=>(
                             <span 

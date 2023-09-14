@@ -1,5 +1,4 @@
 import { useAuth } from '@/Context/authContext'
-import Navbar from '@/components/Navbar'
 import { FC } from 'react'
 import {Outlet,Navigate,useLocation} from 'react-router-dom'
 

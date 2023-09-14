@@ -24,13 +24,12 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-import { toast, useToast } from "@/components/ui/use-toast"
+import { useToast } from "@/components/ui/use-toast"
 import { Textarea } from "./ui/textarea"
 import { Input } from "./ui/input"
-import { collection, doc, getDocs, query, where,Timestamp, addDoc} from "firebase/firestore"
+import { collection,getDocs, query, where,Timestamp, addDoc} from "firebase/firestore"
 
 import { db } from "@/lib/firebaseConfig"
-import { setTimeout } from "timers/promises"
 import { ToastAction } from "@radix-ui/react-toast"
 const quoteRef=collection(db,"quotes")
 

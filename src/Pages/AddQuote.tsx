@@ -1,6 +1,6 @@
 import { AddQuoteForm } from '@/components/AddQuoteForm'
 
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Card, CardContent} from '@/components/ui/card'
 import { FC } from 'react'
 
 interface AddQuoteProps {

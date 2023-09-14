@@ -1,7 +1,7 @@
 import { useAuth } from '@/Context/authContext'
 import Navbar from '@/components/Navbar'
 import { FC } from 'react'
-import {Outlet,Navigate,useLocation} from 'react-router-dom'
+import {Outlet} from 'react-router-dom'
 
 
 interface GuestProps {
@@ -10,8 +10,6 @@ interface GuestProps {
 
 const Guest: FC<GuestProps> = ({}) => {
     const {currentUser}=useAuth()
-    const location=useLocation()
-    const { from } = location.state || { from: { pathname: '/' }}
     
 
   return !currentUser?(
