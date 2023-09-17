@@ -46,7 +46,7 @@ const UserAuthForm: FC<UserAuthFormProps> = ({className,...props}) => {
 
   return (
     <div className={cn("grid gap-6", className)} {...props}>
-      <form onSubmit={onSubmit}>
+      {/* <form onSubmit={onSubmit}>
         <div className="grid gap-2">
           <div className="grid gap-1">
             <Label className="sr-only" htmlFor="email">
@@ -69,17 +69,17 @@ const UserAuthForm: FC<UserAuthFormProps> = ({className,...props}) => {
             Sign In with Email
           </Button>
         </div>
-      </form>
-      <div className="relative">
+      </form> */}
+      {/* <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <span className="w-full border-t" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
           <span className="bg-white px-2 text-slate-400/60 ">
-            Or continue with
+             continue with
           </span>
         </div>
-      </div>
+      </div> */}
       <Button 
         variant={"outline"}
         type="button" disabled={isLoading}

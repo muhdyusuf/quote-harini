@@ -12,13 +12,7 @@ const Guest: FC<GuestProps> = ({}) => {
     const {currentUser}=useAuth()
     
 
-  return !currentUser?(
-    <div
-        className='min-w-screen min-h-screen grid place-content-center'
-    >
-        <Outlet/>
-    </div>
-  ):(
+  return (
     <div
         className='min-w-screen min-h-screen'
     >
